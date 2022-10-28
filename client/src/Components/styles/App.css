@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Audrey";
+  src: url("../fonts/Audrey-Normal.woff") format("woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Audrey-Bold";
+  src: url("../fonts/Audrey-Bold.woff") format("woff");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Modern-Sans";
+  src: url("../fonts/Moderne-Sans-Font.woff") format("woff");
+  font-weight: normal;
+}

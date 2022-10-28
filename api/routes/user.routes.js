@@ -1,6 +1,7 @@
+const { getAllUsers, setImage } = require("../controller/user.controller");
 const router = require("express").Router();
-const { register } = require("../controller/user.controller");
 
-router.post("/register", register);
+router.get("/get_users/:id", getAllUsers);
+router.post("/set_image/:id", setImage);
 
 module.exports = router;

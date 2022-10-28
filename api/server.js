@@ -2,8 +2,10 @@ const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const cors = require("cors");
-const authRouter = require("./routes/user.routes");
+const authRouter = require("./routes/auth.routes");
+const userRouter = require("./routes/user.routes");
 const messageRouter = require("./routes/message.routes");
+const socket = require("socket.io");
 const app = express();
 app.use(express.json());
 app.use(cors());
@@ -17,6 +19,7 @@ mongoose
   .catch(() => console.log("Connection failed"));
 
 app.use("/api/auth", authRouter);
+app.use("/api/users", userRouter);
 app.use("/api/messages", messageRouter);
 
 const server = app.listen(process.env.PORT || 5000, () => {
